@@ -17,19 +17,10 @@ export class AuthService {
   async login(username, password) {
     try {
       const requestBody = { username, password };
-      // console.log("Login Request:", {
-      //   url: import.meta.env.VITE_API_LOGIN_URL,
-      //   body: requestBody,
-      // });
       const response = await axios.post(
-        import.meta.env.VITE_API_LOGIN_URL,
+        import.meta.env.VITE_API_URL + '/login',
         requestBody
       );
-      // console.log("Login API Response:", {
-      //   status: response.status,
-      //   headers: response.headers,
-      //   data: response.data,
-      // });
       if (response.status !== 200) {
         throw new Error(`API request failed with status ${response.status}`);
       }
@@ -136,7 +127,7 @@ export class AuthService {
       ) {
         // console.log(`Fetching page ${page} at ${new Date().toISOString()}`);
         const response = await axios.get(
-          `${import.meta.env.VITE_API_USERS_URL}?page=${page}`
+          `${import.meta.env.VITE_API_URL}/users?page=${page}`
         );
         if (response.status !== 200) {
           console.error(
