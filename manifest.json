@@ -1,0 +1,21 @@
+{
+  "name": "Secure User Sync App",
+  "short_name": "UserSync",
+  "description": "A secure Vue 3 app with user synchronization and offline capabilities",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1976D2",
+  "icons": [
+    {
+      "src": "icons/Vue.js_Logo_2.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/Vue.js_Logo_2.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
